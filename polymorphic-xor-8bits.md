@@ -1,5 +1,9 @@
 # Polimorfismo XOR de 8 bits   
 
+Es una técnica sencilla para modificar el contenido binario de un programa en cada ejecución, manteniendo su funcionalidad intacta. En esencia, consiste en recorrer todos los bytes del código y aplicarles uno a uno la operación lógica XOR con una clave de 8 bits (un valor entre 1 y 255; no se utiliza 0 como clave, ya que XOR con 0 deja el byte sin cambios y, por tanto, no generaría ningún efecto polimórfico). Dado que XOR es reversible, basta con volver a aplicar la misma clave para restaurar el contenido original antes de ejecutarlo. De este modo, el archivo que contiene el payload nunca permanece *en claro*: tras cada ejecución, la huella de bytes cambia por completo, aunque el comportamiento en memoria —cuando se descifra con la clave correcta— permanece inalterado.
+
+Este enfoque ofrece un equilibrio entre simplicidad y efectividad para generar variantes constantes de un payload binario en disco; dificultando el análisis estático basado en firmas.
+
 | Archivo | Descripción |
 |---------|-------------|
 | [`polymorphic-xor-8bits-payload-loader.asm`](./polymorphic-xor-8bits-payload-loader.asm) | Loader de payload contenido en un archivo cifrado con XOR, con reserva de memoria dinámica según el tamaño del payload y preparación de parámetros para payload polimórfico. |
