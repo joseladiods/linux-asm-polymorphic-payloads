@@ -116,7 +116,7 @@ _start:
     cmp   r15, r14                 ; ¿ ya me recorrí todo :-) ?
     jge  .cipher_done              ; si índice >= payload_size, finalizo
 
-    mov   al, [r13 + r15]          ; leer byte (comienza de la base y va incrementando)
+    mov   al, [r13 + r15]          ; lee 1 byte (comienza de la base y va incrementando)
     xor   al, bl                   ; aplica XOR con la clave generada
     mov   [rsp], al                ; almacena el byte cifrado
 
