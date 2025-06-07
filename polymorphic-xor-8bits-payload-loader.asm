@@ -9,7 +9,7 @@
 ;                dinámica según el tamaño del payload y preparación de parámetros para payload
 ;                polimórfico.
 ;
-;                El primer byte del archivo es la clave de 8 bits [1-255], el resto es el payload cifrado.
+;                El primer byte del archivo es la clave de 8 bits [1, 255], el resto es el payload cifrado.
 ;
 ;                Para que el payload se pueda autocifrar y sobrescribirse queda disponible en los registros
 ;                la siguiente información:
