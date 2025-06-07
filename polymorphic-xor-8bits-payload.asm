@@ -5,8 +5,9 @@
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
-; Descripción  : Ejecuta su carga útil, en este caso un simple mensaje por STDOUT, y se auto-cifra con una clave
-;                de 8 bits [1, 255] que se genera en el momento y sobreescribe el archivo que lo contenía.
+; Descripción  : Ejecuta su carga útil, en este caso un simple mensaje por STDOUT, y se auto-cifra, recorriendo byte a
+;                byte todo el código, aplicando a cada byte una operación XOR con una clave de 8 bits [1, 255] que se
+;                genera en el momento y sobreescribe el archivo que lo contenía.
 ;                Con esta metodología logramos que el archivo que contiene el payload vaya variando constantemente.
 ;
 ;                Para que el payload se pueda autocifrar y sobrescribirse recibe registros con la siguiente
