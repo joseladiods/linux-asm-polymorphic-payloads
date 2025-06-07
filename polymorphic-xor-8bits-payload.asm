@@ -6,7 +6,7 @@
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
 ; Descripción  : Ejecuta su carga útil, en este caso un simple mensaje por STDOUT, y se auto-cifra con una clave
-;                de 8 bits [1-255] que se genera en el momento y sobreescribe el archivo que lo contenía.
+;                de 8 bits [1, 255] que se genera en el momento y sobreescribe el archivo que lo contenía.
 ;                Con esta metodología logramos que el archivo que contiene el payload vaya variando constantemente.
 ;
 ;                Para que el payload se pueda autocifrar y sobrescribirse recibe registros con la siguiente
