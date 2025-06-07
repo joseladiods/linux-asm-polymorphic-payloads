@@ -7,7 +7,7 @@ Este enfoque ofrece un equilibrio entre simplicidad y efectividad para generar v
 | Archivo | Descripción |
 |---------|-------------|
 | [`polymorphic-xor-8bits-payload-loader.asm`](./polymorphic-xor-8bits-payload-loader.asm) | Loader de payload contenido en un archivo cifrado con XOR, con reserva de memoria dinámica según el tamaño del payload y preparación de parámetros para payload polimórfico. |
-| [`polymorphic-xor-8bits-payload.asm`](./polymorphic-xor-8bits-payload.asm) | Ejecuta su carga útil, en este caso un simple mensaje por STDOUT, y se **auto-cifra** con una clave de 8 bits [1-255] que se genera en el momento y sobreescribe el archivo que lo contenía. Con esta metodología logramos que el archivo que contiene el payload vaya variando constantemente. |
+| [`polymorphic-xor-8bits-payload.asm`](./polymorphic-xor-8bits-payload.asm) | Ejecuta su carga útil, en este caso un simple mensaje por STDOUT, y se **auto-cifra** con una clave de 8 bits [1, 255] que se genera en el momento y sobreescribe el archivo que lo contenía. Con esta metodología logramos que el archivo que contiene el payload vaya variando constantemente. |
 
 ### Preparación
       
