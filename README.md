@@ -14,7 +14,7 @@ Si tenés dudas, sugerencias o correcciones, escribime a:
 ✉️ `repo-linux-asm-polymorphic-payloads@pithase.com.ar`  
 ⠀
 ## 📄 Artículos disponibles
-
+> **Nota**: Salvo que se indique explícitamente, el código de ejemplo está orientado a la legibilidad y enseñanza, y **no** está optimizado para rendimiento ni tamaño.
 - [Polimorfismo XOR de 8 bits - Programas y procedimientos](./polymorphic-xor-8bits.md) 
 
 - [Polimorfismo XOR de 8 bits - Explicación]
