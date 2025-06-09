@@ -72,7 +72,7 @@ _start:
     js    lseek_error              ; si es negativo, hubo un error
 
     cmp   rax, 9                   ; se necesitan al menos 9 bytes (8 de clave + 1 de payload)
-    jl    size_file_error          ; si es < 2, el archivo no es válido
+    jl    size_file_error          ; si es < 9, el archivo no es válido
 
     mov   rbx, rax                 ; RBX = tamaño del archivo
     sub   rbx, 8                   ; tamaño del payload = tamaño del archivo - 8 (descarta los 8 bytes de la clave)
