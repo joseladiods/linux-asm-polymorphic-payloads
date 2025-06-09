@@ -96,8 +96,8 @@ _start:
     lea   rsi, [rel key_byte]      ; buffer destino
     mov   rdx, 8                   ; cantidad de bytes a leer
     syscall
-    test  rax, rax                 ; comprueba el valor de retorno
-    jle   read_error               ; si es negativo o cero -> RAX <= 0 (si no se leyó ningún byte o hubo error)
+    cmp   rax, 8                   ; ¿ se leyeron los 8 bytes ?
+    jne   read_error               ; si es no, hubo un error
 
     ;======================================================================================================================
     ; 6. Calcula el tamaño a mapear, redondeando al múltiplo de 4096
