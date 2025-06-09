@@ -134,7 +134,7 @@ _start:
     add   rsp, 16                  ; reposiciona RSP
 
     ;============================================================================================================================
-    ; 6. Recorre la memoria byte a byte, los cifra y graba el archivo
+    ; 6. Recorre la memoria en bloques de 8 bytes, los cifra y graba en el archivo
     ;============================================================================================================================
     xor   r15, r15                 ; índice = 0
     mov   r11, 3                   ; R11 = contador de intentos globales de escritura restantes
@@ -146,7 +146,7 @@ _start:
 
     mov   rax, [r13 + r15]         ; lee 8 bytes (comienza de la base y va incrementando)
     xor   rax, rbx                 ; aplica XOR con la clave generada
-    mov   [rsp], rax               ; almacena el bloque d8 bytes cifrado
+    mov   [rsp], rax               ; almacena el bloque de bytes cifrado
 
 .cipher_write_retry:
     mov   rax, 18                  ; syscall: pwrite64
