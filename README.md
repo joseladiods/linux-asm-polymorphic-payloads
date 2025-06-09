@@ -18,3 +18,7 @@ Si tenés dudas, sugerencias o correcciones, escribime a:
 - [Polimorfismo XOR de 8 bits - Programas y procedimientos](./polymorphic-xor-8bits.md) 
 
 - [Polimorfismo XOR de 8 bits - Explicación]
+
+- [Polimorfismo XOR de 64 bits - Programas y procedimientos](./polymorphic-xor-64bits.md) 
+
+- [Polimorfismo XOR de 64 bits - Explicación]
